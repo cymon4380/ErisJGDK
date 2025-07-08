@@ -1,0 +1,14 @@
+{
+    "name": "com.erisdev.erisjgdk",
+    "version": "0.9.0",
+    "displayName": "ErisJGDK",
+    "description": "Base scripts to create Jackbox-like party games.",
+    "unity": "2022.1",
+    "dependencies": {
+        "com.unity.textmeshpro": "3.0.0",
+        "com.unity.timeline": "1.7.0"
+    },
+    "author": {
+        "name": "ErisDev"
+    }
+}

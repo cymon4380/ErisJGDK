@@ -1,0 +1,17 @@
+{
+  "name": "website_js",
+  "version": "0.9.7",
+  "description": "An ErisJGDK website written in JS",
+  "build_date": "08.07.2025",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "author": "ErisDev",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "fs": "^0.0.1-security"
+  }
+}

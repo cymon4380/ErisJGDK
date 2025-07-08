@@ -1,0 +1,8 @@
+{
+    "port": 4267,
+    "views_folder": "/views",
+    "static": {
+        "folder": "static"
+    },
+    "github_url": "https://github.com/cymon4380/ErisJGDK"
+}

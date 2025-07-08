@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1e3f4d6afb32ce4ea7ea099b634dde3, type: 3}
+  m_Name: Test App
+  m_EditorClassIdentifier: 
+  _name: Test App
+  _tag: test-app
+  _version: 1.0
+  _minPlayers: 1
+  _maxPlayers: 8
+  _audienceEnabled: 1
+  _moderationEnabled: 1
+  _sceneName: TestApp
+  _description: 
+  _type: 3
+  _estimatedDuration: 
+  _hidden: 1
+  _available: 0
+  _backgroundColor: {r: 1, g: 1, b: 1, a: 1}

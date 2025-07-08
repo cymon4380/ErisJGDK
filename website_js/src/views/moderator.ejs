@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include('includes/head.ejs') %>
+        <title>ErisJGDK | Moderator</title>
+        <link rel="stylesheet" href="/static/css/controller.css">
+        <link rel="stylesheet" href="/static/css/moderator.css">
+    </head>
+    <body>
+        <%- include('includes/header.ejs') %>
+
+        <div class="container col-lg-3 col-md-4 gameJoin">
+            <div class="mb-3">
+                <label for="roomCode" class="form-label">Код комнаты</label>
+                <input type="text" class="form-control text-uppercase" id="roomCode" autocomplete="off" maxlength="4" placeholder="4-значный код">
+                
+                <label for="moderationPassword" class="form-label">Пароль</label>
+                <input type="text" class="form-control mb-5" id="moderationPassword" autocomplete="off" maxlength="5">
+                
+                <button class="btn btn-lg btn-primary play-button w-100 p-2 mb-2" disabled id="moderateBtn">Модерировать</button>
+                <p class="gameName text-center"></p>
+            </div>
+        </div>
+
+        <%- include('includes/footer.ejs') %>
+        <%- include('includes/scripts.ejs') %>
+        <script src="/static/js/controller.js"></script>
+        <script>
+            moderator = true;
+        </script>
+        <script src="/static/js/ws_data_handler.js"></script>
+        <script src="/static/js/moderator_ui.js"></script>
+    </body>
+</html>

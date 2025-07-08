@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include('includes/head.ejs') %>
+        <title>ErisJGDK | Join Game</title>
+
+        <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=Geologica:wght@600&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="/static/css/controller.css">
+        <link rel="stylesheet" href="/static/css/games.css">
+    </head>
+    <body>
+        <%- include('includes/header.ejs') %>
+
+        <div class="container col-lg-3 col-md-4 gameJoin">
+            <div class="mb-3">
+                <label for="roomCode" class="form-label">Код комнаты</label>
+                <input type="text" class="form-control text-uppercase" id="roomCode" autocomplete="off" maxlength="4" placeholder="4-значный код">
+                
+                <label for="playerName" class="form-label">Имя</label>
+                <input type="text" class="form-control" id="playerName" autocomplete="off" maxlength="12">
+
+                <label for="joinAs" class="form-label">Войти как</label>
+                <select name="joinAs" id="joinAs" class="form-select mb-5">
+                    <option value="player" selected>Игрок</option>
+                    <option value="audience">Зритель</option>
+                </select>
+                
+                <button class="btn btn-lg btn-primary play-button w-100 p-2 mb-2" disabled id="playBtn">Играть</button>
+                <p class="gameName text-center"></p>
+            </div>
+        </div>
+
+        <%- include('includes/footer.ejs') %>
+        <%- include('includes/scripts.ejs') %>
+        <script src="/static/js/controller.js"></script>
+        <script>
+            moderator = false;
+        </script>
+        <script src="/static/js/ws_data_handler.js"></script>
+        <script src="/static/js/game_ui.js"></script>
+    </body>
+</html>

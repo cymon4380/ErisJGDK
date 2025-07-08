@@ -1,0 +1,19 @@
+.playerCard p {
+    font-size: 18px;
+    color: #ccc;
+}
+
+.bg-approved {
+    background-color: #1c3426 !important;
+    border: 1px solid #2ae377;
+}
+
+.bg-rejected {
+    background-color: #371b1f !important;
+    border: 1px solid #df3952;
+}
+
+.bg-rejected p {
+    color: #aaa;
+    text-decoration: line-through;
+}

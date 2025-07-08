@@ -1,0 +1,60 @@
+.app {
+    text-align: center;
+    margin: 16px;
+}
+
+.app .logo {
+    width: 40vw;
+    height: 40vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.app .playerName {
+    font-size: 20px;
+    color: #bbb;
+    font-family: var(--font-primary);
+    margin-bottom: 50px;
+}
+
+.app .prompt {
+    font-size: 22px;
+    margin-bottom: 25px;
+    word-wrap: break-word;
+}
+
+.app .inputContainer * {
+    margin: 5px;
+}
+
+.app .choiceBtn {
+    background-color: #3a3a3a !important;
+    white-space: normal;
+    word-wrap: break-word;
+    max-width: 100%;
+}
+
+.app .choiceBtn:hover {
+    background-color: #444 !important;
+}
+
+.app .choiceBtn:active {
+    background-color: #4c4c4c !important;
+}
+
+body.gen-z-humor-2 {
+    background-image: url('/static/img/gen-z-humor-2/background.png') !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    --color-primary: #e9394b !important;
+    --font-primary: 'Geologica', sans-serif !important;
+    --font-secondary: 'Balsamiq Sans', sans-serif !important;
+}
+
+.gen-z-humor-2 .logo {
+    background-image: url('/static/img/gen-z-humor-2/logo.png');
+} 
