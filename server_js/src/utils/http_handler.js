@@ -66,7 +66,7 @@ server.http_server.on('request', (request, res) => {
                     }));
                 } catch (ex) {
                     server.http_server.error(res, 400);
-					console.error(ex);
+                    console.error(ex);
                 }
             });
         } else if (request.url.startsWith('/findRoom') || request.url.startsWith('/getRoom')) {

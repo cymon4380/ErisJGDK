@@ -29,7 +29,6 @@ namespace ErisJGDK.Base
         public UnityEvent<int> OnModeratorDisconnected;
         public UnityEvent<PlayerInput> OnInputModerated;
 
-
         private void Awake()
         {
             if (Instance == null)
