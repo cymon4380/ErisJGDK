@@ -1,6 +1,6 @@
 {
   "name": "server_js",
-  "version": "0.9.2",
+  "version": "0.9.3",
   "description": "An ErisJGDK server written in JS",
   "main": "src/index.js",
   "scripts": {

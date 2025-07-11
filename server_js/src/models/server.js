@@ -26,7 +26,10 @@ class Server {
 
 
     static listen() {
-        http_server.listen(json_loader.config.websocket.port, json_loader.config.websocket.host);
+        let port = Number(process.env.PORT || json_loader.config.websocket.port),
+        host = process.env.HOST || json_loader.config.websocket.host;
+
+        http_server.listen(port, host);
     }
 
     static getClientByWebSocket(_ws) {

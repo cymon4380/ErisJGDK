@@ -1,8 +1,8 @@
 {
   "name": "website_js",
-  "version": "0.9.7",
+  "version": "0.9.8",
   "description": "An ErisJGDK website written in JS",
-  "build_date": "08.07.2025",
+  "build_date": "11.07.2025",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js"

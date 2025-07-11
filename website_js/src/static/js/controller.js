@@ -1,5 +1,3 @@
-const getRoomURL = 'http://127.0.0.1:2096/getRoom';
-const webSocketURL = 'ws://127.0.0.1:2096';
 const pingInterval = 30;
 
 var gameData = { },
@@ -77,7 +75,7 @@ function getRoom() {
 
 function play(enteredPassword) {
     let roomCode = $('#roomCode').val().toUpperCase(),
-    name = $('#playerName').val(),
+    name = $('#playerName').val().trim(),
     role = $('#joinAs').val() || 'player';
     
     if (name.length === 0)

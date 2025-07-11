@@ -18,6 +18,11 @@ function validate(url, connectionType) {
             if (!password)
                 password = null;
 
+            if (name)
+                name = name.trim();
+            if (playerId)
+                playerId = playerId.trim();
+
             if (!name || !code || !role || !playerId)
                 throw new TypeError('Invalid form body');
 

@@ -4,5 +4,12 @@
     "static": {
         "folder": "static"
     },
-    "github_url": "https://github.com/cymon4380/ErisJGDK"
+    "github_url": "https://github.com/cymon4380/ErisJGDK",
+    "connection": {
+        "host": "127.0.0.1",
+        "port": 2096,
+        "secure": false,
+        "websocket_suffix": "",
+        "get_room_url": "/getRoom"
+    }
 }
