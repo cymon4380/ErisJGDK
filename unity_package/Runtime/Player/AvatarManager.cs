@@ -1,4 +1,5 @@
-using System.Collections.Generic;
+using System;
+using System.Linq;
 using UnityEngine;
 
 namespace ErisJGDK.Base
@@ -7,9 +8,9 @@ namespace ErisJGDK.Base
     {
         public static AvatarManager Instance;
 
-        [SerializeField] private List<PlayerIdentity> _availableAvatars;
+        [SerializeField] private PlayerIdentity[] _avatars;
 
-        public List<PlayerIdentity> AvailableAvatars => _availableAvatars;
+        public PlayerIdentity[] Avatars => _avatars;
 
 
         private void Awake()
@@ -20,13 +21,13 @@ namespace ErisJGDK.Base
 
         public PlayerIdentity GetAvailableAvatar()
         {
-            if (_availableAvatars.Count == 0)
-                return null;
+            return _avatars.OrderBy(_ => new Guid()).FirstOrDefault(a => !IsAvatarUsed(a));
+        }
 
-            PlayerIdentity identity = _availableAvatars[new System.Random().Next(_availableAvatars.Count)];
-            _availableAvatars.Remove(identity);
-
-            return identity;
+        private bool IsAvatarUsed(PlayerIdentity avatar)
+        {
+            return RoomManager.Instance.CurrentRoom.GetPlayers(Player.PlayerRole.Player)
+                .Any(p => p.Identity == avatar);
         }
     }
 }
