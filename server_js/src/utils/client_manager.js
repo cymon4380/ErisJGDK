@@ -48,6 +48,8 @@ function joinPlayer(ws, data) {
 
     if (!_room)
         throw new TypeError('Room not found');
+    if (!_room.ws)
+        throw new TypeError('The room is not activated');
 
     if (!Object.values(enums.PlayerRole).find(r => r === data.role))
         throw new TypeError('Invalid role');
@@ -152,6 +154,8 @@ function joinModerator(ws, data) {
 
     if (!_room)
         throw new TypeError('Room not found');
+    if (!_room.ws)
+        throw new TypeError('The room is not activated');
     if (!_room.moderationEnabled)
         throw new TypeError('Moderation is not enabled for this room');
     if (data.password != _room.moderationPassword)
@@ -186,7 +190,7 @@ function onClose(ws) {
 
     if (_client instanceof player.Player) {
         let _room = server.Server.getRoom(_client.roomCode);
-        if (!_room)
+        if (!_room || !_room.ws)
             return server.Server.destroyClient(_client);
         if (!_room.locked && _client.kicked)
             return server.Server.destroyClient(_client);
@@ -207,7 +211,7 @@ function onClose(ws) {
     } else {
         if (_client instanceof moderator.Moderator) {
             let _room = server.Server.getRoom(_client.roomCode);
-            if (!_room)
+            if (!_room || !_room.ws)
                 return server.Server.destroyClient(_client);
 
             _room.moderators = _room.moderators.filter(m => m.id !== _client.id);
