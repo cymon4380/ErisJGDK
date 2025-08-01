@@ -67,8 +67,10 @@ class Server {
                     _room.moderators = _room.moderators.filter(m => m !== client);
             }
         }
-
-        this.ws.closeWithReason(_client.ws, reason);
+        
+        if (_client.ws)
+            this.ws.closeWithReason(_client.ws, reason);
+        
         this.clients = this.clients.filter(c => c !== _client);
 
         console.debug(`Client ${_client.id} has been destroyed with reason: ${reason}`);
