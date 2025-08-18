@@ -29,7 +29,8 @@ class Room extends client.Client {
     }
 
     isFull() {
-        return this.getPlayers(enums.PlayerRole.player).length >= this.appData.players.max;
+        let players = this.getPlayers(enums.PlayerRole.player).filter(p => !p.kicked);
+        return players.length >= this.appData.players.max;
     }
 
     isAudienceFull() {
