@@ -21,6 +21,9 @@ namespace ErisJGDK.Base
         public PlayerIdentity GetAvailableAvatar()
         {
             var available = _avatars.Where(a => !IsAvatarUsed(a));
+            if (!available.Any())
+                return null;
+
             return available.ElementAt(Random.Range(0, available.Count()));
         }
 
