@@ -1,4 +1,3 @@
-using System;
 using System.Linq;
 using UnityEngine;
 
@@ -21,7 +20,8 @@ namespace ErisJGDK.Base
 
         public PlayerIdentity GetAvailableAvatar()
         {
-            return _avatars.OrderBy(_ => new Guid()).FirstOrDefault(a => !IsAvatarUsed(a));
+            var available = _avatars.Where(a => !IsAvatarUsed(a));
+            return available.ElementAt(Random.Range(0, available.Count()));
         }
 
         private bool IsAvatarUsed(PlayerIdentity avatar)
